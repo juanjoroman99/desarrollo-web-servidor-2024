@@ -59,7 +59,7 @@
         tiene 1, 2 o 3 digitos*/ 
         $numero_aleatorio = rand(1,200);
         $digitos = 0;
-        if ($numero_aleatorio < 10):
+        /*if ($numero_aleatorio < 10):
             $digitos = 1;
         elseif ($numero_aleatorio < 100 and $numero_aleatorio >= 10):
             $digitos = 2;
@@ -68,7 +68,22 @@
         else:
             $digitos = "ERROR";
         endif;
-        echo "<p>el numero tiene $digitos</p>";
+        echo "<p>el numero tiene $digitos</p>";*/
+        //Version con match
+        $digitos = match (true) {
+            $numero_aleatorio >= 1 and $numero_aleatorio <=9 => 1 ,
+            $numero_aleatorio >= 10 and $numero_aleatorio <= 99 => 2 ,
+            $numero_aleatorio >= 100 and $numero_aleatorio <= 999 => 3,
+            default => "ERROR"
+        };
+
+        $num = 2;
+        $resultado = match ($num) {
+            1 => "El numero es 1" ,
+            2 => "El numero es 2" ,
+            3 => "El numero es 3"
+        };
+        echo($num);
     ?>
 </body>
 </html>
