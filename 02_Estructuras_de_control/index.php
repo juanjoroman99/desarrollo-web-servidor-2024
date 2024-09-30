@@ -40,6 +40,14 @@
                     Ejercicios para practicar todo
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <a href="bucles.php">bucles-php</a>
+                </td>
+                <td>
+                    Ejercicios para practicar bucles
+                </td>
+            </tr>
         </tbody>
     </table>
 </body>
