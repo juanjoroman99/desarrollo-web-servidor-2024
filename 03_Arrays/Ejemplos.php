@@ -210,5 +210,69 @@
                 <?php } ?>
         </tbody>
     </table>
+    <br><br><br>
+    <table>
+        <caption>Estudiantes ordenados por el nombre al reves</caption>
+        <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php
+            asort($notas);
+            foreach($notas as $alumno => $nota){?>
+                <tr class="<?php if($nota < 5)echo "suspenso";
+                    else echo "aprobado"; ?>">
+                    <td><?php echo $alumno ?></td>
+                    <td><?php echo $nota ?></td>
+                    <?php if ($nota < 5) {
+                        echo "<td>suspenso</td>";
+                    }
+                    elseif ($nota > 6 and $nota < 9) {
+                        echo "<td>notable</td>";
+                    }elseif ($nota > 4 and $nota < 7) {
+                        echo "<td>aprobado</td>";
+                    }else {
+                        echo "<td> Sobresaliente</td>";
+                    }
+                    ?>
+                </tr>   
+                <?php } ?>
+        </tbody>
+    </table>
+    <br><br><br>
+    <table>
+        <caption>Estudiantes ordenados por notas al reves</caption>
+        <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php
+            arsort($notas);
+            foreach($notas as $alumno => $nota){?>
+                <tr class="<?php if($nota < 5)echo "suspenso";
+                    else echo "aprobado"; ?>">
+                    <td><?php echo $alumno ?></td>
+                    <td><?php echo $nota ?></td>
+                    <?php if ($nota < 5) {
+                        echo "<td>suspenso</td>";
+                    }
+                    elseif ($nota > 6 and $nota < 9) {
+                        echo "<td>notable</td>";
+                    }elseif ($nota > 4 and $nota < 7) {
+                        echo "<td>aprobado</td>";
+                    }else {
+                        echo "<td> Sobresaliente</td>";
+                    }
+                    ?>
+                </tr>   
+                <?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -1,0 +1,16 @@
+table{
+    border: 2px solid purple;
+}
+th, td{
+    border: 1px solid palevioletred;
+}
+
+caption{
+    border: 2px solid pink;
+}
+.aprobado{
+    background-color: greenyellow;
+}
+.suspenso{
+    background-color: red;
+}

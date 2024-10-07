@@ -229,6 +229,21 @@
      * 
      * Mostrar en una nueva tabla todo ordenado por la nota de 10 a 0 (orden inverso)
      */
+
+     $notas["Paula"] = rand(0,10);
+     $notas["Waluis"] = rand(0,10);
+     unset($notas["Vicente"]);
+     krsort($notas);
+     arsort($notas);
     ?>
+    <table>
+        <caption>Estudiantes ordenados por el nombre al reves</caption>
+        <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+    </table>
 </body>
 </html>
