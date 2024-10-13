@@ -22,10 +22,9 @@
             $frase = "";
 
             for ($i=$numero1; $i <= $numero2; $i++) { 
-                if ($i % ) {
-                    
-                }
+                
             }
+            echo "<h1>los numeros primos entre $numero1 y $numero2 son $frase</h1>";
         }
     ?>
     
