@@ -12,34 +12,24 @@
 <body>
     <form action="" method="post">
         <input type="text" name="temperatura" id="temp">
-        <select name="tem1">
-            <option value="Cº">Cº</option>
-            <option value="Fº">Fº</option>
-            <option value="Kº">Kº</option>
+        <select name="inicial">
+            <option value="C">C</option>
+            <option value="F">F</option>
+            <option value="K">K</option>
         </select>
         a
-        <select name="tem2">
-            <option value="Cº">Cº</option>
-            <option value="Fº">Fº</option>
-            <option value="Kº">Kº</option>
+        <select name="final">
+            <option value="C">C</option>
+            <option value="F">F</option>
+            <option value="K">K</option>
         </select>
         <?php
-        function celsius_kelvin($tipo1){
-            $tipo1 = $tipo1 + 273.15;
-            return $tipo1;
-        }
-        function celsius_farenhait($tipo1){
-            $tipo2 = $tipo1 ($tipo1 * 1.8)+32;
-            return $tipo1;
-        }
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $temperatura = $_POST["temperatura"];
-                $tipo1 = $_POST["tem1"];
-                $tipo2 = $_POST["tem2"];
-                $res = match ([$tipo1,$tipo2]) {
-                     ["Cº","Kº"] => celsius_kelvin,
-                     ["Cº","Fº"] => celsius_farenhait,
-                }
+                $inicial = $_POST["inicial"];
+                $final = $_POST["final"];
+                
+                
             }
         ?>
     </form>

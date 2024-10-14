@@ -19,12 +19,19 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $numero1 = $_POST["numero1"];
             $numero2 = $_POST["numero2"];
-            $frase = "";
-
+            echo "<ul>";
             for ($i=$numero1; $i <= $numero2; $i++) { 
-                
+                $es_primo = true;
+                for ($j=2; $j <= $i/2; $j++) { 
+                    if ($i % $j == 0) {
+                        $es_primo =false;
+                    }
+                }
+                if ($es_primo) {
+                    echo "<li>$i</li>";
+                }
             }
-            echo "<h1>los numeros primos entre $numero1 y $numero2 son $frase</h1>";
+            echo "</ul>";
         }
     ?>
     
