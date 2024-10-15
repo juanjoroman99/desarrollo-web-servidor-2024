@@ -28,7 +28,7 @@
 
             $sueldo_final = match (true) {
                 $salario <= 12450 => $salario - (($salario*19)/100),
-                $salario > 12450 and $salario <= 20199 => ($salario - (12450 - TRAMO1))+,
+                $salario > 12450 and $salario <= 20199 => ($salario - (12450 - TRAMO1)),
                 $salario > 20199 and $salario <= 35199 => ,
                 $salario > 35199 and $salario <= 59999 => ,
                 $salario > 59999 and $salario <= 20199 => ,
